@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Foody | Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <h1 onclick="location.href='index.html'">🍔 Foody</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#" onclick="logout()">Logout</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <h2>👑 Admin Dashboard</h2>
+
+  <div class="admin-section">
+    <h3 id="formTitle">Add Product</h3>
+
+    <input type="hidden" id="productId">
+
+    <div class="admin-form">
+      <input id="name" placeholder="Product Name">
+      <input id="price" type="number" placeholder="Price">
+
+      <input id="imageUrl" placeholder="Image URL">
+      <input id="stock" type="number" placeholder="Stock">
+
+      <textarea id="description" placeholder="Description"></textarea>
+
+      <label>
+        <input type="checkbox" id="available"> Available
+      </label>
+
+      <div class="admin-form-actions">
+        <button type="button" class="btn btn-primary" onclick="saveProduct()">Save</button>
+        <button type="button" class="btn btn-outline" onclick="resetForm()">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-section">
+    <h3>📦 Products</h3>
+    <div id="productList"></div>
+  </div>
+
+ 
+  <div class="admin-section">
+    <h3>📊 Revenue Analytics</h3>
+    <div style="position: relative; height: 280px;">
+      <canvas id="revenueChart"></canvas>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/admin.js"></script>
+
+<script>
+  const user = getUser();
+  if (!user || user.role !== "ROLE_ADMIN") {
+    alert("Admin access only");
+    location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

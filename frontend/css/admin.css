@@ -1,0 +1,68 @@
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.admin-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 35px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.admin-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.admin-form textarea {
+  grid-column: span 2;
+}
+
+.admin-form input,
+.admin-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.admin-form-actions {
+  grid-column: span 2;
+  margin-top: 10px;
+}
+
+.admin-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18px;
+  border-radius: 12px;
+  background: #f9fafb;
+  margin-bottom: 12px;
+}
+
+.admin-product h4 {
+  margin: 0;
+}
+
+.badge-green {
+  color: green;
+  font-weight: 600;
+}
+
+.badge-red {
+  color: red;
+  font-weight: 600;
+}
+
+/* ===============================
+   REVENUE CHART FIX
+   =============================== */
+#revenueChart {
+  width: 100% !important;
+  height: 260px !important;
+}

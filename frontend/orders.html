@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Foody | Orders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ 
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+
+  <nav class="navbar">
+    <h1 onclick="window.location.href='index.html'">🍔 Foody</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+    <h2 style="margin-bottom:20px;">Your Orders 📦</h2>
+
+    <div id="ordersList"></div>
+
+    <div id="emptyOrders" class="empty" style="display:none;">
+      <h2>No orders yet</h2>
+      <p>Place your first order 😋</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2026 Foody. All rights reserved.
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/orders.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Foody | Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 onclick="window.location.href='index.html'">🍔 Foody</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2 style="margin-bottom:20px;">Your Cart 🛒</h2>
+
+    <div id="cartItems"></div>
+
+    <div id="cartFooter" style="display:none;">
+      <div class="total" id="totalAmount">₹0</div>
+      <button class="btn btn-primary" style="width:100%; margin-top:15px;" onclick="placeOrder()">
+        Place Order
+      </button>
+    </div>
+
+    <div id="emptyCart" class="empty" style="display:none;">
+      <h2>Your cart is empty</h2>
+      <p>Add some delicious food 😋</p>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+
+</body>
+</html>
